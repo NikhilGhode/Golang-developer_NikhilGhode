@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TastyBites</title>
+  </head>
+  <body>
+    <h2>Reserve a Table</h2>
+    <form id="reserve-form">
+      User ID: <input type="number" id="user" /><br />
+      Table Number: <input type="number" id="table" min="1" max="20" /><br />
+      <button type="submit">Reserve</button>
+    </form>
+
+    <h2>Place an Order</h2>
+    <form id="order-form">
+      User ID: <input type="number" id="order-user" /><br />
+      Table ID: <input type="number" id="order-table" /><br />
+      Menu Item IDs (comma-separated): <input type="text" id="items" /><br />
+      <button type="submit">Order</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
