@@ -21,10 +21,10 @@ This repository contains a backend system for TastyBites, built as part of an as
 ## 🖼️ UI Preview
 
 ### 🎫 Table Reservation & Order Form  
-![Reservation Form Screenshot](./assets/userdashboard.jpg)
+![Reservation Form Screenshot](assets/userdashboard.jpg)
 
 ### 🛠️ Admin Dashboard  
-![Admin Dashboard Screenshot](./assets/admindashboard.jpg)
+![Admin Dashboard Screenshot](assets/admindashboard.jpg)
 
 ---
 
