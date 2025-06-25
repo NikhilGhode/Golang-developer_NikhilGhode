@@ -3,7 +3,7 @@ package models
 type User struct {
 	ID    int
 	Name  string
-	Email string
+	//Email string
 }
 
 type MenuItem struct {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fbeec1;
+        color: #333;
+      }
+
+      .container {
+        max-width: 500px;
+        margin: 60px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        text-align: center;
+        color: #d2601a;
+        margin-bottom: 25px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background: #d2601a;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #a9440f;
+      }
+
+      pre {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Check Table Booking</h2>
+      <input type="number" id="admin-table-id" placeholder="Enter Table ID" />
+      <button onclick="fetchTable()">View Details</button>
+      <pre id="result">Result will appear here...</pre>
+    </div>
+
+    <script>
+      async function fetchTable() {
+        const id = document.getElementById("admin-table-id").value;
+        if (!id) {
+          document.getElementById("result").textContent =
+            "Please enter a Table ID.";
+          return;
+        }
+        try {
+          const res = await fetch("/admin/table/" + id);
+          if (!res.ok) throw new Error("Request failed");
+          const data = await res.json();
+          document.getElementById("result").textContent = JSON.stringify(
+            data,
+            null,
+            2
+          );
+        } catch (error) {
+          document.getElementById("result").textContent =
+            "Error fetching data.";
+        }
+      }
+    </script>
+  </body>
+</html>
