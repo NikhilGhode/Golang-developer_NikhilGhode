@@ -5,7 +5,6 @@ This repository contains a backend system for TastyBites, built as part of an as
 ![Go](https://img.shields.io/badge/Made%20with-Go-00ADD8?logo=go)
 ![Postman](https://img.shields.io/badge/Tested%20with-Postman-orange?logo=postman)
 ![Git](https://img.shields.io/badge/Version%20Control-Git-informational?logo=git)
-![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
 
